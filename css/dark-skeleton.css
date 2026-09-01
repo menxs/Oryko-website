@@ -328,16 +328,6 @@ border-bottom-color: var(--table-td);
   height: auto;
   align-self: flex-start;
   margin: 0 0 1rem 0;
-  color: var(--font-color);
-  background-color: var(--font-color);
-  -webkit-mask-image: url("../svg/brandlogo.svg");
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-          mask-image: url("../svg/brandlogo.svg");
-          mask-repeat: no-repeat;
-          mask-position: center;
-          mask-size: contain;
 }
 
 @media (prefers-color-scheme:dark) {

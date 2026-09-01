@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     detectColorScheme();
 
+    //swap the brand logo svg to match the active theme
+    function updateLogo() {
+        var img = document.getElementById('brand-logo-img');
+        if (!img) return;
+        var dark = document.documentElement.getAttribute('data-theme') == "dark";
+        img.src = dark ? "svg/brandlogo-dark.svg" : "svg/brandlogo-light.svg";
+    }
+    updateLogo();
+
     //identify all the toggle switch HTML elements
     const toggleSwitches = document.querySelectorAll('#theme-switch');
 
@@ -36,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function(){
         } else {
             localStorage.setItem('theme', 'light');
             document.documentElement.setAttribute('data-theme', 'light');
-        }    
+        }
+        updateLogo();
     }
 
     //listener for changing themes
