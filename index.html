@@ -6,46 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="svg/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Marcellus:wght@400;700&family=Urbanist:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/dark-skeleton.css">
+  <link rel="stylesheet" href="css/oryko.css">
   <script src="js/dark-theme.js"></script>
 </head>
 <body>
   <div class="container">
-    <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
-      <select class="neu-select" aria-label="Language">
+    <div id="toolbar">
+      <select id="lang-select" class="neu" aria-label="Language">
         <option value="en">EN</option>
         <option value="es">ES</option>
         <option value="gl">GL</option>
       </select>
-      <button id="theme-switch" class="neu-btn" style="height: 38px; padding: 0 16px;">Theme</button>
+      <button id="theme-switch" class="neu" aria-label="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <header style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 4rem;">
-      <div class="row hero-row">
-        <div class="two-thirds column" style="display: flex; flex-direction: column; justify-content: center;">
-          <img id="brand-logo-img" src="svg/brandlogo-light.svg" alt="ORYKO" class="brand-logo">
-          <p>Casio modding &amp; leather accessories. Coming soon.</p>
-          <form action="#" method="post" class="neu" style="padding: 1.5rem; margin-top: 1rem;">
-            <p style="margin-bottom: 1rem;">We'll email you when it's ready.</p>
-            <div class="row form-row" style="margin-left: 0;">
-              <div class="nine columns" style="margin-left: 0; width: 70%;">
-                <input type="email" placeholder="your@email.com" class="neu-inset" style="width: 100%; margin-bottom: 0;">
-              </div>
-              <div class="three columns" style="width: 28%; margin-left: 2%;">
-                <button type="submit" class="neu-btn neu-btn-primary" style="width: 100%; box-sizing: border-box; height: 38px; line-height: 38px; padding: 0 2rem; font-weight: 600; letter-spacing: .1rem; text-indent: .1rem; text-transform: uppercase;">Notify Me</button>
-              </div>
+    <header>
+      <div id="hero">
+        <div class="two-thirds column" id="hero-text">
+          <div>
+            <img id="brand-logo-img" src="svg/brandlogo-light.svg" alt="ORYKO" class="brand-logo">
+            <p>Casio modding &amp; leather accessories. Coming soon.</p>
+          </div>
+          <form action="#" method="post">
+            <div class="card row neu-inset">
+                <p> We'll email you when it's ready.</p>
+                <input type="email" class="neu u-max-full-width " placeholder="your@email.com">
+                <button type="submit" class="neu-btn neu-btn-primary">Notify Me</button>
             </div>
           </form>
         </div>
-        <div class="one-third column" style="display: flex; align-items: flex-end; justify-content: center;">
-          <img src="img/wrist.jpg" alt="Watch on wrist" class="neu hero-img">
+        <div class="one-third column" id="hero-media">
+          <img src="img/wrist.jpg" class="neu-lg" width="100%" alt="Watch on wrist">
         </div>
       </div>
     </header>
 
-    <footer style="text-align: center; padding: 2rem 0;">
+    <footer>
       <p>&copy; 2026 Oryko</p>
     </footer>
   </div>

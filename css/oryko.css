@@ -1,0 +1,184 @@
+/* Neu components */
+.neu {
+    border-radius: 5px;
+    border: none;
+    background: var(--neu-bg);
+    box-shadow:  .5rem .5rem 16px var(--neu-dark),
+                -.5rem -.5rem 16px var(--neu-light);
+}
+
+.neu-inset {
+    border-radius: 10px;
+    background: var(--neu-bg);
+    box-shadow: inset 10px 10px 32px var(--neu-dark),
+                inset -10px -10px 32px var(--neu-light);
+}
+
+.neu-lg {
+    border-radius: 10px;
+    border: none;
+    background: var(--neu-bg);
+    box-shadow:  1rem 1rem 32px var(--neu-dark),
+                -1rem -1rem 32px var(--neu-light);
+}
+
+.neu-btn {
+    background: var(--neu-bg);
+    border: none;
+    border-radius: 8px;
+    color: var(--font-color);
+    margin: 0;
+    box-shadow: 3px 3px 6px var(--neu-dark), -2px -2px 5px var(--neu-light);
+    transition: box-shadow .15s ease;
+}
+.neu-btn:hover,
+.neu-btn:focus {
+    box-shadow: 2px 2px 4px var(--neu-dark), -1px -1px 3px var(--neu-light);
+}
+.neu-btn:active {
+    box-shadow: inset 2px 2px 5px var(--neu-dark), inset -2px -2px 5px var(--neu-light);
+}
+
+.neu-btn-primary {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-color);
+    box-shadow: 3px 3px 6px var(--neu-dark), -2px -2px 5px var(--neu-light);
+}
+.neu-btn-primary:hover,
+.neu-btn-primary:focus {
+    background-color: var(--button-primary-bg-hover);
+    color: var(--button-primary-color-hover);
+    box-shadow: 2px 2px 4px var(--neu-dark), -1px -1px 3px var(--neu-light);
+}
+.neu-btn-primary:active {
+    box-shadow: inset 2px 2px 5px var(--neu-dark), inset -2px -2px 5px var(--neu-light);
+}
+
+select.neu {
+    height: 40px;
+    padding: 0 12px;
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card.row {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card.row p {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card.row input {
+    flex: 1 1 0%;
+    min-width: 0;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.card.row button {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+/* Layout */
+
+
+@media (min-width: 550px) and (max-width: 750px) {
+  .card.row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card.row input {
+    margin: 0 0 1rem 0;
+  }
+  .card.row button {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Mobile - columns go full width and stack (Skeleton default) */
+@media (max-width: 550px) {
+  #hero {
+    flex-direction: column;
+  }
+  #hero-media {
+    align-items: flex-start;
+  }
+}
+
+.brand-logo {
+  display: block;
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  align-self: flex-start;
+  margin: 0 0 2rem 0;
+}
+
+/* Theme button - square icon button */
+#theme-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Toolbar - lang select + theme switch, right aligned */
+#toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#lang-select {
+  margin-right: 1em;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Hero - equal-height columns, image centered in its column */
+#hero {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+#hero .two-thirds.column,
+#hero .one-third.column {
+  float: none;
+  flex: 0 0 auto;
+}
+
+#hero-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

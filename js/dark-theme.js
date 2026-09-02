@@ -18,10 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
             var theme = "dark";
         }
 
-        //dark theme preferred, set document with a `data-theme` attribute
-        if (theme=="dark") {
-             document.documentElement.setAttribute("data-theme", "dark");
-        }
+        //set document with a `data-theme` attribute (dark or light)
+        document.documentElement.setAttribute("data-theme", theme);
     }
     detectColorScheme();
 
@@ -52,5 +50,5 @@ document.addEventListener("DOMContentLoaded", function(){
     //listener for changing themes
     for (var i = 0, len = toggleSwitches.length; i < len; i++) {
         toggleSwitches[i].addEventListener('click', switchTheme, false);
-    }  
+    }
 })
