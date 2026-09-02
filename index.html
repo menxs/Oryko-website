@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/oryko.css">
   <script src="js/dark-theme.js"></script>
   <script src="js/lang.js"></script>
+  <script src="js/notify.js"></script>
 </head>
 <body>
   <div class="container">
@@ -34,10 +35,10 @@
             <img id="brand-logo-img" src="svg/brandlogo-light.svg" alt="ORYKO" class="brand-logo">
             <p data-i18n="tagline">Casio modding &amp; leather accessories. Coming soon.</p>
           </div>
-          <form action="#" method="post">
+          <form action="https://formspree.io/f/mrpgkprz" method="post">
             <div class="card row neu-inset">
                 <p data-i18n="formHelper"> We'll email you when it's ready.</p>
-                <input type="email" class="neu u-max-full-width " placeholder="your@email.com" data-i18n="email" data-i18n-attr="placeholder">
+                <input type="email" name="email" class="neu u-max-full-width " placeholder="your@email.com" required data-i18n="email" data-i18n-attr="placeholder">
                 <button type="submit" class="neu-btn neu-btn-primary" data-i18n="notify">Notify Me</button>
             </div>
           </form>
